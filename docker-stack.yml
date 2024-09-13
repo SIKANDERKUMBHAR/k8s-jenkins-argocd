@@ -22,7 +22,7 @@ services:
       - backend
 
   vote:
-    image: dockersamples/examplevotingapp_vote
+    image: sikanderali/test:vote
     ports:
       - 5000:80
     networks:
@@ -31,14 +31,14 @@ services:
       replicas: 2
 
   result:
-    image: dockersamples/examplevotingapp_result
+    image: sikanderali/test:result
     ports:
       - 5001:80
     networks:
       - backend
 
   worker:
-    image: dockersamples/examplevotingapp_worker
+    image: sikanderali/test:worker
     networks:
       - frontend
       - backend
